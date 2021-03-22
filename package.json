@@ -1,10 +1,11 @@
 {
   "name": "npm-counter-keys",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Counts amount of numbers, vowels or consonants in a string.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/gabit690/npm-counter-keys/issues"
   },
-  "homepage": "https://github.com/gabit690/npm-counter-keys#readme"
+  "homepage": "https://github.com/gabit690/npm-counter-keys#readme",
+  "dependencies": {
+    "jsdoc": "^3.6.6"
+  }
 }

@@ -4,7 +4,7 @@ const removeTicks = (str) => {
 
 const countVowels = (word, repetition = true) => {
   // Get an array of vowels. Otherwise get an empty array.
-  let matchResult = word.match(/[aeiou]|[áéíóúü]/gi) || [];
+  let matchResult = String(word).match(/[aeiou]|[áéíóúü]/gi) || [];
   if (repetition) {
     return matchResult.length;
   } else {
@@ -22,7 +22,7 @@ const countVowels = (word, repetition = true) => {
 
 const countConsonants = (word, repetition = true) => {
   // Get an array of consonants. Otherwise get an empty array.
-  let matchResult = word.match(/(?![aeiou])[a-zñ]/gi) || [];
+  let matchResult = String(word).match(/(?![aeiou])[a-zñ]/gi) || [];
   if (repetition) {
     return matchResult.length;
   } else {
@@ -38,7 +38,7 @@ const countConsonants = (word, repetition = true) => {
 
 const countNumbers = (word, repetition = true) => {
   // Get an array of numbers. Otherwise get an empty array.
-  const matchResult = word.match(/[0-9]/g) || [];
+  const matchResult = String(word).match(/[0-9]/g) || [];
   if (repetition) {
     return matchResult.length;
   } else {
