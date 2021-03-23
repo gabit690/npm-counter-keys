@@ -1,11 +1,24 @@
+//@ts-check
+
 const removeTicks = (str) => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 } 
 
-const countVowels = (word, repetition = true) => {
+/**
+ * Gets amount of VOWELS in a string.
+ * @param {string} word A word.
+ * @param {boolean} repetitions Optional. Consider repetitions of chars.
+ * @returns {number} Amount of vowels.
+ */
+const countVowels = (word, repetitions = true) => {
+
+  if (typeof word != 'string') {
+    throw new Error('first parameter is not a type string!');
+  }
+
   // Get an array of vowels. Otherwise get an empty array.
-  let matchResult = String(word).match(/[aeiou]|[áéíóúü]/gi) || [];
-  if (repetition) {
+  let matchResult = word.match(/[aeiou]|[áéíóúü]/gi) || [];
+  if (repetitions) {
     return matchResult.length;
   } else {
     // Change to Lower case the elements of the array.
@@ -20,10 +33,21 @@ const countVowels = (word, repetition = true) => {
   }
 };
 
-const countConsonants = (word, repetition = true) => {
+/**
+ * Gets amount of CONSONANTS in a string.
+ * @param {string} word A word.
+ * @param {boolean} repetitions Optional. Consider repetitions of chars.
+ * @returns {number} Amount of consonants.
+ */
+const countConsonants = (word, repetitions = true) => {
+
+  if (typeof word != 'string') {
+    throw new Error('first parameter is not a type string!');
+  }
+
   // Get an array of consonants. Otherwise get an empty array.
-  let matchResult = String(word).match(/(?![aeiou])[a-zñ]/gi) || [];
-  if (repetition) {
+  let matchResult = word.match(/(?![aeiou])[a-zñ]/gi) || [];
+  if (repetitions) {
     return matchResult.length;
   } else {
     // Change to Lower case the elements of the array.
@@ -36,10 +60,21 @@ const countConsonants = (word, repetition = true) => {
   }
 };
 
-const countNumbers = (word, repetition = true) => {
+/**
+ * Gets amount of NUMBERS in a string.
+ * @param {string} word A word.
+ * @param {boolean} repetitions Optional. Consider repetitions of chars.
+ * @returns {number} Amount of numbers.
+ */
+const countNumbers = (word, repetitions = true) => {
+
+  if (typeof word != 'string') {
+    throw new Error('first parameter is not a type string!');
+  }
+  
   // Get an array of numbers. Otherwise get an empty array.
-  const matchResult = String(word).match(/[0-9]/g) || [];
-  if (repetition) {
+  const matchResult = word.match(/[0-9]/g) || [];
+  if (repetitions) {
     return matchResult.length;
   } else {
     // Built an array with unique characters.
