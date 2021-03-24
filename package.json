@@ -1,11 +1,12 @@
 {
   "name": "npm-counter-keys",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Counts amount of numbers, vowels or consonants in a string.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "jsdoc -c jsdoc.json",
+    "deploy": "gh-pages -d docs"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +22,8 @@
   "dependencies": {
     "docdash": "^1.2.0",
     "jsdoc": "^3.6.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }

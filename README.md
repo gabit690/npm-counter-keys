@@ -17,4 +17,4 @@ It was documented with JSdoc.
 
 **Profession:** Developer and autodidact.
 
-[docs]: ???
+[docs]: https://gabit690.github.io/npm-counter-keys/
